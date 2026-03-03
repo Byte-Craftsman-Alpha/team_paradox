@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Team | University Campus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="grid-pattern">
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav-glass fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center">
+                        <i class="fas fa-code text-white text-sm"></i>
+                    </div>
+                    <span class="font-bold text-lg" id="nav-team-name">Tech Team</span>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="text-sm text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#members" class="text-sm text-gray-400 hover:text-white transition-colors">Team</a>
+                    <a href="#achievements" class="text-sm text-gray-400 hover:text-white transition-colors">Achievements</a>
+                    <a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
+                </div>
+
+                <button class="md:hidden text-gray-400 hover:text-white" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="block py-3 text-gray-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Home</a>
+        <a href="#about" class="block py-3 text-gray-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">About</a>
+        <a href="#members" class="block py-3 text-gray-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Team</a>
+        <a href="#achievements" class="block py-3 text-gray-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Achievements</a>
+        <a href="#contact" class="block py-3 text-gray-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center relative pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 mb-8 animate-fade-in-up" style="animation-delay: 0.1s">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="text-sm text-indigo-300" id="hero-campus">University Campus</span>
+                </div>
+
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.2s">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 glow-text" id="hero-team-name">
+                        Tech Team
+                    </span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-400 mb-4 animate-fade-in-up font-mono" style="animation-delay: 0.3s" id="hero-tagline">
+                    Building the future, one commit at a time<span class="typing-cursor"></span>
+                </p>
+
+                <p class="text-base text-gray-500 mb-10 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.4s" id="hero-description">
+                    A passionate group of student developers, designers, and innovators pushing the boundaries of technology.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.5s">
+                    <a href="#members" class="px-8 py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5">
+                        Meet the Team <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#about" class="px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 animate-fade-in-up" style="animation-delay: 0.7s" id="stats-container">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 float-animation z-10">
+            <div class="w-6 h-10 rounded-full border-2 border-gray-600 flex justify-center pt-2">
+                <div class="w-1 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-mono text-sm mb-2 block">&lt;about&gt;</span>
+                <h2 class="text-4xl font-bold mb-4">Who We Are</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4" id="about-title">Our Mission</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6" id="about-description">
+                        We are a team of passionate students dedicated to building innovative solutions, learning cutting-edge technologies, and contributing to the open-source community.
+                    </p>
+
+                    <div id="about-highlights" class="space-y-4">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4" id="about-tech-grid">
+                    <!-- Dynamically populated tech stack -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section id="members" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-mono text-sm mb-2 block">&lt;team&gt;</span>
+                <h2 class="text-4xl font-bold mb-4">Our Team</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">The brilliant minds behind our projects and innovations.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="filter-tabs">
+                <button class="tab-btn active" onclick="filterMembers('all', this)">All</button>
+            </div>
+
+            <!-- Members grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="members-grid">
+                <!-- Loader -->
+                <div class="loader col-span-full">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-mono text-sm mb-2 block">&lt;achievements&gt;</span>
+                <h2 class="text-4xl font-bold mb-4">Our Achievements</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto" id="achievements-timeline">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <section id="contact" class="py-24 relative z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-indigo-400 font-mono text-sm mb-2 block">&lt;connect&gt;</span>
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Interested in collaborating or joining the team? Reach out to us!</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-16" id="team-socials">
+                <!-- Dynamically populated -->
+            </div>
+
+            <div class="text-center text-gray-600 text-sm">
+                <p>© <span id="current-year"></span> <span id="footer-team-name">Tech Team</span>. All rights reserved.</p>
+                <p class="mt-2 font-mono text-xs text-gray-700">Made with <i class="fas fa-heart text-red-500/50"></i> and lots of <i class="fas fa-coffee text-amber-500/50"></i></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Detail Modal -->
+    <div class="modal-overlay" id="member-modal" onclick="closeModalOutside(event)">
+        <div class="modal-content" id="modal-body">
+            <!-- Dynamically populated -->
+        </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js?v=20260303-4"></script>
+</body>
+</html>
+
