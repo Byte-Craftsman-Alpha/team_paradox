@@ -96,24 +96,24 @@
         ],
         "achievements": [
             {
-                "date": "2024",
-                "title": "Won Smart India Hackathon",
-                "desc": "Secured first place in the SIH regional round with an AI-powered solution."
-            },
-            {
-                "date": "2024",
-                "title": "Open Source Contribution Milestone",
-                "desc": "Crossed 500+ contributions across major open source projects."
-            },
-            {
-                "date": "2023",
+                "date": "Aug 2025",
                 "title": "Team Founded",
-                "desc": "Byte Craftsman Alpha was established with 4 founding members at IET Gorakhpur."
+                "desc": "Team paradox was established with 4 founding members at IET Gorakhpur, by Anshika Singh."
             },
             {
-                "date": "2023",
-                "title": "First Hackathon Victory",
-                "desc": "Won our first inter-college hackathon with a blockchain-based solution."
+                "date": "Sept 2025",
+                "title": "First Hackathon participation",
+                "desc": "Participated in Samsung Innovation Campus hackathon and contributed to group project for CivicSetu."
+            },
+            {
+                "date": "Nov 2025",
+                "title": "Paranox2.0 Shortlisted",
+                "desc": "Secured a ranking in top 40 teams out of 1000+teams and 20,000 registrations of Paranox2.O hackathon organized by TechXNinjas at Newtons Schools of Technology, Sonipat."
+            },
+            {
+                "date": "Feb 2026",
+                "title": "RIFT'26 Shortlisted",
+                "desc": "Got shortlisted for RIFT'26 hackathon organized by PW IoI, at Lucknow, made it to semi-finals"
             }
         ],
         "socials": {
