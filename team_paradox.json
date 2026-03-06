@@ -126,6 +126,11 @@
     },
     "members": [
         {
+            "name": "Anshika Singh",
+            "role": "Web Developer & UI/UX",
+            "aboutme": "https://raw.githubusercontent.com/Anshika9838/Anshika9838/refs/heads/main/aboutme.json"
+        },
+        {
             "name": "Aditya Chaudhari",
             "role": "Vibe-Coder",
             "aboutme": "https://raw.githubusercontent.com/Byte-Craftsman-Alpha/Byte-Craftsman-Alpha/refs/heads/main/aboutme.json"
